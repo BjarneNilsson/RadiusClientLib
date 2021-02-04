@@ -47,6 +47,10 @@ namespace net.holmedal
             };
             await _AClient.PostAsJsonAsync("AddUser",a);
         }
+        public async Task DeleteUser(string User)
+        {
+            await _AClient.DeleteAsync("DeleteUser?User=" + User);
+        }
 
 
     }
